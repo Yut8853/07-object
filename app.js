@@ -119,14 +119,14 @@ function countMap(word) {
     // countMap関数に入る言葉の文字の数だけ回す
     const char = word[i];
     // ループ変数iに対応する文字をcharに代入
-    const count = map.get(char);
+    const count = map.get(char) || 0;
     // Mapオブジェクトからcharに対応する値を取得しcountに代入
-    map.set(char, count);
+    map.set(char, count + 1);
     // Mapオブジェクトに、キーとしてchar、値としてcountのペアを追加
   }
   return map;
 }
-const mapObj = count('hhhellooo');
+const mapObj = countMap('hhhellooo');
 console.log(mapObj);
 
 
