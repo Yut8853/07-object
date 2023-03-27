@@ -121,6 +121,7 @@ function countMap(word) {
     // ループ変数iに対応する文字をcharに代入
     const count = map.get(char) || 0;
     // Mapオブジェクトからcharに対応する値を取得しcountに代入
+    // またundefinedなら０を代入
     map.set(char, count + 1);
     // Mapオブジェクトに、キーとしてchar、値としてcountのペアを追加
   }
@@ -128,6 +129,8 @@ function countMap(word) {
 }
 const mapObj = countMap('hhhellooo');
 console.log(mapObj);
+
+module.exports = countMap;
 
 
 
