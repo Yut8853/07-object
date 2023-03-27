@@ -150,8 +150,7 @@
 }
 
 // 任意のアルファベット列が与えられた時、その文字列に現れるアルファベットの数をカウントしオブジェクトにまとめて返す。
-
-{
+(() => {
   function count(word) {
     // ここを実装してください。
     const obj = {};
@@ -174,9 +173,7 @@
   
   const obj = count('hello');
   console.log(obj); 
-}
 
-{
   function countMap(word) {
     const map = new Map();
     // Mapオブジェクトを生成
@@ -195,8 +192,11 @@
   const mapObj = countMap('hhhellooo');
   console.log(mapObj);
   
-}
-// module.exports = countMap;
+  module.exports = {
+    count,
+    countMap
+  };
+})();
 
 
 
